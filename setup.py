@@ -10,12 +10,12 @@ with open("README.rst") as f:
     long_description = f.read()
 
 setup(
-    name="ofxstatement-sample",
+    name="ofxstatement-ee-swedbank",
     version=version,
-    author="Andrey Lebedev",
-    author_email="andrey@lebedev.lt",
-    url="https://github.com/kedder/ofxstatement",
-    description=("Sample plugin for ofxstatement"),
+    author="Sergei Mihhailov",
+    author_email="me@rsi2m.dev",
+    url="https://github.com/rsi2m/ofxstatement-ee-seb",
+    description=("Plugin for estonian Swedbank bank"),
     long_description=long_description,
     license="GPLv3",
     keywords=["ofx", "banking", "statement"],
@@ -33,7 +33,7 @@ setup(
     package_dir={"": "src"},
     namespace_packages=["ofxstatement", "ofxstatement.plugins"],
     entry_points={
-        "ofxstatement": ["sample = ofxstatement.plugins.sample:SamplePlugin"]
+        "ofxstatement": ["ee-swedbank = ofxstatement.plugins.ee_swedbank:EstoniaSwedbankPlugin"]
     },
     install_requires=["ofxstatement"],
     include_package_data=True,
